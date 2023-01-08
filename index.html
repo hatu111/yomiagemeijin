@@ -1,0 +1,454 @@
+
+<html lang="ja">
+    <head>
+      <meta charset="utf-8">
+      <title>読み上げ名人</title>
+      <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    </head>
+    <body>
+        <header>
+            <h1>読み上げ名人</h1>
+                <input type="text" id="word"></form>
+                <button id="button" onclick="pronounce()">答える</button>
+      
+
+          <div class="btn1" onclick="audio1()">はい</div>
+            <audio id="btn_audio1">
+                <source src="./audio/22.mp3" type="audio/mp3">
+            </audio>    
+          
+            <div class="btn1" onclick="audio23()">いいえ</div>
+            <audio id="btn_audio23">
+                <source src="./audio/23.mp3" type="audio/mp3">
+            </audio>   
+
+            <div class="btn1" onclick="audio16()">はい、そうです。</div>
+            <audio id="btn_audio16">
+                <source src="./audio/16.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn1" onclick="audio17()">いいえ、違います。</div>
+            <audio id="btn_audio17">
+                <source src="./audio/17.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn1" onclick="audio18()">ありがとうございます。</div>
+            <audio id="btn_audio18">
+                <source src="./audio/18.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn1" onclick="audio27()">ありがとうございました。</div>
+            <audio id="btn_audio27">
+                <source src="./audio/27.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn1" onclick="audio21()">どうも、ありがとうございました。</div>
+            <audio id="btn_audio21">
+                <source src="./audio/21.mp3" type="audio/mp3">
+            </audio>
+
+            <div class="btn1" onclick="audio19()">わかりません。</div>
+            <audio id="btn_audio19">
+                <source src="./audio/19.mp3" type="audio/mp3">
+            </audio>
+
+            <div class="btn1" onclick="audio20()">もう一度お願いします。</div>
+            <audio id="btn_audio20">
+                <source src="./audio/20.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn1" onclick="audio3()">ユニバーサルマーククイズです。</div>
+            <audio id="btn_audio3">
+                <source src="./audio/kuizudesu.mp3" type="audio/mp3">
+            </audio>   
+            
+            <div class="btn1" onclick="audio4()">おみくじです。</div>
+            <audio id="btn_audio4">
+                <source src="./audio/omikuzidesu.mp3" type="audio/mp3">
+            </audio>   
+
+            <div class="btn1" onclick="audio5()">ユニバーサルマークを覚えようです。</div>
+            <audio id="btn_audio5">
+                <source src="./audio/oboeyoudesu.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn1" onclick="audio6()">手話です。</div>
+            <audio id="btn_audio6">
+                <source src="./audio/syuwadesu.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn1" onclick="audio28()">よろしくお願いします</div>
+            <audio id="btn_audio28">
+                <source src="./audio/28.mp3" type="audio/mp3">
+            </audio>
+
+            <div class="btn1" onclick="audio29()">質疑応答はタブレットで音声を再生します。</div>
+            <audio id="btn_audio29">
+                <source src="./audio/29.mp3" type="audio/mp3">
+            </audio> 
+
+          <div class="btn1" onclick="audio22()">使う人にたのしんでもらえるよう、音や動きを工夫しました。</div>
+            <audio id="btn_audio22">
+                <source src="./audio/123954422556404.mp3" type="audio/mp3">
+            </audio> 
+            
+            <div class="btn1" onclick="audio8()">特にクイズ問題の再生とランダム出題は、なかなかうまくできず、いろんな方法を試してうまくいきました。また、手話やクイズの画面を作り、ペッパーに取り込む作業も大変でした。
+            </div>
+            <audio id="btn_audio8">
+                <source src="./audio/8.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn2" onclick="audio9()">全体をとおしてpepperの動きを想像しながら作ることが楽しかったです。表彰式で本物のペッパーが動く姿を見たとき感動しました。
+            </div>
+            <audio id="btn_audio9">
+                <source src="./audio/zenntai.mp3" type="audio/mp3">
+            </audio>
+
+            <div class="btn2" onclick="audio2()">いろんな人と接することができるので、感染症などをうつさずに人をなぐさめたりお世話をしたり、様子を確認したりできると思います。また、僕は話せないので、発表などに使いたいです。</div>
+            <audio id="btn_audio2">
+                <source src="./audio/2.mp3" type="audio/mp3">
+            </audio>   
+
+            <div class="btn2" onclick="audio30()">何か家事をまかせてみたいです。</div>
+            <audio id="btn_audio30">
+                <source src="./audio/30.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn2" onclick="audio10()">クイズや手話をもっと増やしたいです。クイズは上級コースと初級コースなどレベル分けをしたいです。</div>
+            <audio id="btn_audio10">
+                <source src="./audio/kuizuyasyuwawomottohuyashitai.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn2" onclick="audio11()">公共の場所など人が集まるところに置きたいです。</div>
+            <audio id="btn_audio11">
+                <source src="./audio/11.mp3" type="audio/mp3">
+            </audio>  
+
+            <div class="btn2" onclick="audio12()">天気予報やスケジュールなどを管理し、ゴミ出しを教えてくれたり、予定を教えてくれたり、傘を持っていくようにアドバイスしてくれる機能を作ってみたいです。</div>
+            <audio id="btn_audio12">
+                <source src="./audio/12.mp3" type="audio/mp3">
+            </audio>  
+            
+            <div class="btn2" onclick="audio31()">はい。勉強ばかりではなく、クイズやおみくじなど楽しいものが入っているのでいいねと言ってくれました。</div>
+            <audio id="btn_audio31">
+                <source src="./audio/31.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn2" onclick="audio7()">僕は発表の時などに話さないので、ペッパーくんは代わりに話してくれて、ありがたいです。</div>
+            <audio id="btn_audio7">
+                <source src="./audio/pepparhaarigatai.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn2" onclick="audio32()">世界一の売り上げのゲームを作りたいです。また、障害のある人や、高齢者の方々に役に立つものを作りたいです。</div>
+            <audio id="btn_audio32">
+                <source src="./audio/32.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn2" onclick="audio24()">まだ簡単な挨拶程度ですが、少しずつ手話を覚えています。</div>
+            <audio id="btn_audio24">
+                <source src="./audio/24.mp3" type="audio/mp3">
+            </audio>   
+
+         
+            
+
+
+
+
+            <div class="btn2" onclick="audio13()">写真を絵に加工するアプリを使って、手話の動作をつなげました。</div>
+            <audio id="btn_audio13">
+                <source src="./audio/13.mp3" type="audio/mp3">
+            </audio>   
+            
+            <div class="btn2" onclick="audio14()">普段は週に２、3時間やっています。</div>
+            <audio id="btn_audio14">
+                <source src="./audio/14.mp3" type="audio/mp3">
+            </audio>   
+
+            <div class="btn2" onclick="audio15()">ネットで調べたりします。それでもできないときは先生に聞いたりします。</div>
+            <audio id="btn_audio15">
+                <source src="./audio/15.mp3" type="audio/mp3">
+            </audio> 
+            
+            
+
+            <div class="btn2" onclick="audio25()">去年から手話のことがずっと気になっていたので、作品にしました。</div>
+            <audio id="btn_audio25">
+                <source src="./audio/25.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn2" onclick="audio26()">ジャバスクリプトを勉強しているので、近い考え方で作りました。</div>
+            <audio id="btn_audio26">
+                <source src="./audio/26.mp3" type="audio/mp3">
+            </audio>
+
+            <div class="btn" onclick="audio33()">縦軸・横軸の位置を簡単に出すために、自分で縦軸横軸探知機を作りました。そうすると簡単にできました。</div>
+            <audio id="btn_audio32">
+                <source src="./audio/33.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn" onclick="audio34()">はじめはスクラッチと同じようにリスト機能を使って作っていましたが、ペッパーではうまくいきませんでした。色々考えて僕の理想とするペッパーの動きを、一度作ってみて、それを問題ごとに関数にまとめてみたら、うまくいきました。</div>
+            <audio id="btn_audio34">
+                <source src="./audio/34.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn" onclick="audio35()">はじめはうまくいかなくて、あきらめようとしました。だけど、「こうなるといいのにな」と思いながら、問題の関数を３つつなげてみた時に思いつきました。</div>
+            <audio id="btn_audio35">
+              <source src="./audio/35.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn" onclick="audio36()">３カ月です</div>
+            <audio id="btn_audio36">
+                <source src="./audio/36.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn" onclick="audio37()">画面の作成は、パワーポイントを家族に教えてもらいました。あと、インターネットで調べて作りました。</div>
+            <audio id="btn_audio37">
+                <source src="./audio/37.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn" onclick="audio38()">使いやすい面では、スクラッチが好きです。でも、ペッパー君を動かすことができるロボブロックスも面白いです</div>
+            <audio id="btn_audio38">
+                <source src="./audio/38.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn" onclick="audio39()">ネットで調べたりします。あと、他のことをしているときもずっと「どうしたらうまくいくか」を考えて最終的に思いつきました。</div>
+            <audio id="btn_audio39">
+                <source src="./audio/39.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn" onclick="audio40()">ジャバスクリプトを勉強しているので、近い考え方で作りました。</div>
+            <audio id="btn_audio40">
+                <source src="./audio/40.mp3" type="audio/mp3">
+            </audio> 
+
+            <div class="btn" onclick="audio41()">手話をしている僕の写真を撮りました。その写真を絵に加工するアプリを使って、手話の動作をつなげました。写真をそのまま出すよりも出演者が僕だとわかりにくくするためにしました。</div>
+            <audio id="btn_audio41">
+                <source src="./audio/41.mp3" type="audio/mp3">
+            </audio> 
+
+        </main>
+    <script type="text/javascript">
+    
+      'use strict'
+    
+      function pronounce() {
+    
+        let word = document.getElementById('word').value;
+        let u = new SpeechSynthesisUtterance();
+        u.lang = 'ja';
+        u.text = word;
+        speechSynthesis.speak(u);
+      }
+
+      function audio1() {
+        document.getElementById('btn_audio1').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio1').play(); //クリックしたら音を再生
+      }
+      function audio2() {
+        document.getElementById('btn_audio2').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio2').play(); //クリックしたら音を再生
+      }
+      function audio3() {
+        document.getElementById('btn_audio3').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio3').play(); //クリックしたら音を再生
+      }
+
+      function audio4() {
+        document.getElementById('btn_audio4').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio4').play(); //クリックしたら音を再生
+      }
+
+      function audio5() {
+        document.getElementById('btn_audio5').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio5').play(); //クリックしたら音を再生
+      }
+
+      function audio6() {
+        document.getElementById('btn_audio6').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio6').play(); //クリックしたら音を再生
+      }
+
+      function audio7() {
+        document.getElementById('btn_audio7').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio7').play(); //クリックしたら音を再生
+      }
+
+
+      function audio8() {
+        document.getElementById('btn_audio8').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio8').play(); //クリックしたら音を再生
+      }
+
+      function audio9() {
+        document.getElementById('btn_audio9').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio9').play(); //クリックしたら音を再生
+      }
+
+      function audio10() {
+        document.getElementById('btn_audio10').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio10').play(); //クリックしたら音を再生
+      }
+
+      function audio11() {
+        document.getElementById('btn_audio11').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio11').play(); //クリックしたら音を再生
+      }
+
+      function audio12() {
+        document.getElementById('btn_audio12').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio12').play(); //クリックしたら音を再生
+      }
+
+      function audio13() {
+        document.getElementById('btn_audio13').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio13').play(); //クリックしたら音を再生
+      }
+
+      function audio14() {
+        document.getElementById('btn_audio14').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio14').play(); //クリックしたら音を再生
+      }
+
+      function audio15() {
+        document.getElementById('btn_audio15').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio15').play(); //クリックしたら音を再生
+      }
+
+      function audio16() {
+        document.getElementById('btn_audio16').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio16').play(); //クリックしたら音を再生
+      }
+
+      function audio17() {
+        document.getElementById('btn_audio17').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio17').play(); //クリックしたら音を再生
+      }
+
+      function audio18() {
+        document.getElementById('btn_audio18').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio18').play(); //クリックしたら音を再生
+      }
+
+      function audio19() {
+        document.getElementById('btn_audio19').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio19').play(); //クリックしたら音を再生
+      }
+
+      function audio20() {
+        document.getElementById('btn_audio20').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio20').play(); //クリックしたら音を再生
+      }
+
+      function audio21() {
+        document.getElementById('btn_audio21').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio21').play(); //クリックしたら音を再生
+      }
+
+      function audio22() {
+        document.getElementById('btn_audio22').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio22').play(); //クリックしたら音を再生
+      }
+
+      function audio23() {
+        document.getElementById('btn_audio23').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio23').play(); //クリックしたら音を再生
+      }
+
+      function audio24() {
+        document.getElementById('btn_audio24').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio24').play(); //クリックしたら音を再生
+      }
+
+      function audio25() {
+        document.getElementById('btn_audio25').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio25').play(); //クリックしたら音を再生
+      }
+
+      function audio26() {
+        document.getElementById('btn_audio26').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio26').play(); //クリックしたら音を再生
+      }
+
+      function audio27() {
+        document.getElementById('btn_audio27').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio27').play(); //クリックしたら音を再生
+      }
+
+      function audio28() {
+        document.getElementById('btn_audio28').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio28').play(); //クリックしたら音を再生
+      }
+
+      function audio29() {
+        document.getElementById('btn_audio29').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio29').play(); //クリックしたら音を再生
+      }
+
+      function audio30() {
+        document.getElementById('btn_audio30').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio30').play(); //クリックしたら音を再生
+      }
+
+      function audio31() {
+        document.getElementById('btn_audio31').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio31').play(); //クリックしたら音を再生
+      }
+
+      function audio32() {
+        document.getElementById('btn_audio32').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio32').play(); //クリックしたら音を再生
+      }
+
+      function audio33() {
+        document.getElementById('btn_audio33').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio33').play(); //クリックしたら音を再生
+      }
+
+      function audio34() {
+        document.getElementById('btn_audio34').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio34').play(); //クリックしたら音を再生
+      }
+
+      function audio35() {
+        document.getElementById('btn_audio35').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio35').play(); //クリックしたら音を再生
+      }
+
+      function audio36() {
+        document.getElementById('btn_audio36').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio36').play(); //クリックしたら音を再生
+      }
+
+      function audio37() {
+        document.getElementById('btn_audio37').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio37').play(); //クリックしたら音を再生
+      }
+
+      function audio38() {
+        document.getElementById('btn_audio38').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio38').play(); //クリックしたら音を再生
+      }
+
+      function audio39() {
+        document.getElementById('btn_audio39').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio39').play(); //クリックしたら音を再生
+      }
+
+      function audio40() {
+        document.getElementById('btn_audio40').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio40').play(); //クリックしたら音を再生
+      }
+
+      function audio41() {
+        document.getElementById('btn_audio41').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio41').play(); //クリックしたら音を再生
+      }
+
+
+
+</script>
+    
+    </body>
+    </html>
+    
