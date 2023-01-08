@@ -5,9 +5,10 @@
       <title>* *読み上げ名人* *</title>
       <link href="style.css" rel="stylesheet" type="text/css" media="all">
     </head>
-    <body>
-        <header>
-            <img src="images/title.png"width="50%">
+        
+            <img src="./images/title.png" class="appButton">
+             
+            
               <div>  <input type="text" id="word"></form>   
                 <button id="button" onclick="pronounce()">答える</button>  <BR>  </div>
       
@@ -252,6 +253,11 @@
                 <source src="./audio/bennkyou.mp3" type="audio/mp3">
             </audio> 
 
+            <div class="btn" onclick="audio46()">自分で文字を入力して読んだり登録してある文章を読み上げることができます。---------------------------------------------------------------------------------</div>
+            <audio id="btn_audio46">
+                <source src="./audio/jibunn.mp3" type="audio/mp3">
+            </audio> 
+
         </main>
     <script type="text/javascript">
     
@@ -488,6 +494,11 @@
       function audio45() {
         document.getElementById('btn_audio45').currentTime = 0; //連続クリックに対応
         document.getElementById('btn_audio45').play(); //クリックしたら音を再生
+      }
+
+      function audio46() {
+        document.getElementById('btn_audio46').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio46').play(); //クリックしたら音を再生
       }
 
 
