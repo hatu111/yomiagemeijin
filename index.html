@@ -233,8 +233,8 @@
                 <source src="./audio/困っている.mp3" type="audio/mp3">
             </audio> 
 
-            <div class="btn" onclick="audio42()">プログラミングは楽しいです。頑張って勉強すると、問題を解決できます。だから、たくさんの人にプログラミングの楽しさを知ってほしいです。</div>
-            <audio id="btn_audio42">
+            <div class="btn" onclick="audio47()">プログラミングは楽しいです。頑張って勉強すると、問題を解決できます。だから、たくさんの人にプログラミングの楽しさを知ってほしいです。</div>
+            <audio id="btn_audio47">
                 <source src="./audio/puroguraminngu .mp3" type="audio/mp3">
             </audio>
             
@@ -501,6 +501,10 @@
         document.getElementById('btn_audio46').play(); //クリックしたら音を再生
       }
 
+      function audio47() {
+        document.getElementById('btn_audio47').currentTime = 0; //連続クリックに対応
+        document.getElementById('btn_audio47').play(); //クリックしたら音を再生
+      }
 
 
 </script>
