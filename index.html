@@ -1,305 +1,422 @@
-
+<!DOCTYPE html>
 <html lang="ja">
-    <head>
-      <meta charset="utf-8">
-      <title>* *読み上げ名人* *</title>
-      <link href="style.css" rel="stylesheet" type="text/css" media="all">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>読み上げ名人</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="flex_test-box">
         
-            <img src="./images/title.png" class="appButton">
+
+        <img src="./images/title.png" class="appButton">
              
             
-              <div>  <input type="text" id="word"></form>   
-                <button id="button" onclick="pronounce()">答える</button>  <BR>  </div>
+        <div>  <input type="text" id="word"></form>   
+        <button id="button" onclick="pronounce()">答える</button>  <BR>  </div>
+          <br>
+          <div>
+        <div class="btn1 draggable draggable-1 js-draggable" ondblclick="audio1()">ありがとうございます。</div>
+        <audio id="btn_audio1">
+            <source src="./audio/1.mp3" type="audio/mp3">
+        </audio> 
       
+        <div class="btn1 draggable draggable-2 js-draggable" ondblclick="audio2()">ありがとうございました。</div>
+        <audio id="btn_audio2">
+            <source src="./audio/2.mp3" type="audio/mp3">
+        </audio> 
+      
+        <div class="btn1 draggable draggable-3 js-draggable" ondblclick="audio3()">はい、そうです。</div>
+        <audio id="btn_audio3">
+            <source src="./audio/3.mp3" type="audio/mp3">
+        </audio> 
+      
+        <div class="btn1 draggable draggable-4 js-draggable" ondblclick="audio4()">いいえ、違います。</div>
+        <audio id="btn_audio4">
+            <source src="./audio/4.mp3" type="audio/mp3">
+        </audio> 
 
-          <div class="btn1" onclick="audio1()">はい</div>
-            <audio id="btn_audio1">
-                <source src="./audio/22.mp3" type="audio/mp3">
-            </audio>    
-          
-            <div class="btn1" onclick="audio23()">いいえ</div>
-            <audio id="btn_audio23">
-                <source src="./audio/23.mp3" type="audio/mp3">
-            </audio>   
+        <div class="btn1 draggable draggable-5 js-draggable" ondblclick="audio5()">よろしくお願いします</div>
+        <audio id="btn_audio5">
+            <source src="./audio/5.mp3" type="audio/mp3">
+        </audio> 
 
-            <div class="btn1" onclick="audio16()">はい、そうです。</div>
-            <audio id="btn_audio16">
-                <source src="./audio/16.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn1 draggable draggable-6 js-draggable" ondblclick="audio6()">もう一度お願いします。</div>
+        <audio id="btn_audio6">
+            <source src="./audio/6.mp3" type="audio/mp3">
+        </audio> 
 
-            <div class="btn1" onclick="audio17()">いいえ、違います。</div>
-            <audio id="btn_audio17">
-                <source src="./audio/17.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn1 draggable draggable-7 js-draggable" ondblclick="audio7()">手話です。</div>
+        <audio id="btn_audio7">
+            <source src="./audio/7.mp3" type="audio/mp3">
+        </audio> 
 
-            <div class="btn1" onclick="audio18()">ありがとうございます。</div>
-            <audio id="btn_audio18">
-                <source src="./audio/18.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn1 draggable draggable-8 js-draggable" ondblclick="audio8()">ユニバーサルマーククイズです。</div>
+        <audio id="btn_audio8">
+            <source src="./audio/8.mp3" type="audio/mp3">
+        </audio>   
 
-            <div class="btn1" onclick="audio27()">ありがとうございました。</div>
-            <audio id="btn_audio27">
-                <source src="./audio/27.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn1 draggable draggable-9 js-draggable" ondblclick="audio9()">ユニバーサルマークを覚えよう</div>
+        <audio id="btn_audio9">
+            <source src="./audio/9.mp3" type="audio/mp3">
+        </audio> 
 
-            <div class="btn1" onclick="audio21()">どうも、ありがとうございました。</div>
-            <audio id="btn_audio21">
-                <source src="./audio/21.mp3" type="audio/mp3">
-            </audio>
+        <div class="btn1 draggable draggable-10 js-draggable" ondblclick="audio10()">おみくじです。</div>
+        <audio id="btn_audio10">
+            <source src="./audio/10.mp3" type="audio/mp3">
+        </audio>  
+        
+        <div class="btn1 draggable draggable-11 js-draggable" ondblclick="audio11()">はい</div>
+        <audio id="btn_audio11">
+            <source src="./audio/11.mp3" type="audio/mp3">
+        </audio>  
 
-            <div class="btn1" onclick="audio19()">わかりません。</div>
-            <audio id="btn_audio19">
-                <source src="./audio/19.mp3" type="audio/mp3">
-            </audio>
+        <div class="btn1 draggable draggable-12 js-draggable" ondblclick="audio12()">いいえ</div>
+        <audio id="btn_audio12">
+            <source src="./audio/12.mp3" type="audio/mp3">
+        </audio> 
 
-            <div class="btn1" onclick="audio20()">もう一度お願いします。</div>
-            <audio id="btn_audio20">
-                <source src="./audio/20.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn1 draggable draggable-13 js-draggable" ondblclick="audio13()">わかりません。</div>
+        <audio id="btn_audio13">
+            <source src="./audio/13.mp3" type="audio/mp3">
+        </audio>
 
-            <div class="btn1" onclick="audio3()">ユニバーサルマーククイズです。</div>
-            <audio id="btn_audio3">
-                <source src="./audio/kuizudesu.mp3" type="audio/mp3">
-            </audio>   
-            
-            <div class="btn1" onclick="audio4()">おみくじです。</div>
-            <audio id="btn_audio4">
-                <source src="./audio/omikuzidesu.mp3" type="audio/mp3">
-            </audio>   
+        <div class="btn1 draggable draggable-14 js-draggable" ondblclick="audio14()">質問をお願いします</div>
+        <audio id="btn_audio14">
+            <source src="./audio/14.mp3" type="audio/mp3">
+        </audio> 
 
-            <div class="btn1" onclick="audio5()">ユニバーサルマークを覚えようです。</div>
-            <audio id="btn_audio5">
-                <source src="./audio/oboeyoudesu.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn1 draggable draggable-15 js-draggable" ondblclick="audio15()">こちらの音声が聞こえますか。</div>
+        <audio id="btn_audio15">
+            <source src="./audio/15.mp3" type="audio/mp3">
+        </audio> 
 
-            <div class="btn1" onclick="audio6()">手話です。</div>
-            <audio id="btn_audio6">
-                <source src="./audio/syuwadesu.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn1 draggable draggable-16 js-draggable" ondblclick="audio16()">質疑応答はタブレットで再生</div>
+        <audio id="btn_audio16">
+            <source src="./audio/16.mp3" type="audio/mp3">
+        </audio> 
+          </div>
+          <div>
+        <div class="btn2 draggable draggable-17 js-draggable" ondblclick="audio17()">難しかったところは、クイズのランダム出題です。スクラッチと同じようにやってもうまくいかず、「こうなるといいのにな」と思いながら、問題の関数をつなげて解決できました。</div>
+        <audio id="btn_audio17">
+            <source src="./audio/17.mp3" type="audio/mp3">
+        </audio>          
+      
+        <div class="btn2 draggable draggable-18 js-draggable" ondblclick="audio18()">作っていて楽しかったことは、全体をとおしてpepperの動きを想像しながら作ることです。<br>また、クイズを作るのが一番難しかったけど、作っていて楽しかったです。</div>
+        <audio id="btn_audio18">
+            <source src="./audio/18.mp3" type="audio/mp3">
+        </audio>     
 
-            <div class="btn1" onclick="audio28()">よろしくお願いします</div>
-            <audio id="btn_audio28">
-                <source src="./audio/28.mp3" type="audio/mp3">
-            </audio>
+       <div class="btn2 draggable draggable-19 js-draggable" ondblclick="audio19()">工夫したところは、ペッパーの音や動きで楽しくなるようにすることです。<br>また、ブラッシュアップで名人の認定証をつけたところも工夫しました。</div>
+        <audio id="btn_audio19">
+            <source src="./audio/19.mp3" type="audio/mp3">
+        </audio>  
 
-            <div class="btn1" onclick="audio29()">質疑応答はタブレットで再生します。</div>
-            <audio id="btn_audio29">
-                <source src="./audio/29.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn2 draggable draggable-20 js-draggable" ondblclick="audio20()">大変だったのは、スクラッチと同じ方法で作ってもうまくいかず、いろんな方法を試しながら作ったところです。また、手話やクイズの画面を作り、取り込む作業も大変でした。----</div>
+        <audio id="btn_audio20">
+            <source src="./audio/20.mp3" type="audio/mp3">
+        </audio> 
 
-            <div class="btn1" onclick="audio2000()">こちらの音声が聞こえますか。</div>
-            <audio id="btn_audio2000">
-                <source src="./audio/kikoemasuka.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn2 draggable draggable-21 js-draggable" ondblclick="audio21()">今後の改良では、<br>クイズや手話をもっと増やしたいです。<br>クイズは上級コースと初級コースなどレベル分けをしたいです。<br>-------------------------</div>
+        <audio id="btn_audio21">
+            <source src="./audio/21.mp3" type="audio/mp3">
+        </audio> 
 
-            
-            <div class="btn1" onclick="audio2001()">質問をお願いします</div>
-            <audio id="btn_audio2001">
-                <source src="./audio/onegaisimasu.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn2 draggable draggable-22 js-draggable" ondblclick="audio22()">RoboBlocksで作品を作ったのは、宮崎市の地域連携大会の参加条件がroboblocksだったことがきっかけです。ロボットを動かすのは初めてでしたが、とても楽しいです。</div>
+        <audio id="btn_audio22">
+            <source src="./audio/22.mp3" type="audio/mp3">
+        </audio>  
 
-          <div class="btn2" onclick="audio22()">使う人にたのしんでもらえるよう、音や動きを工夫しました。---------------------------------------------------------------------------</div>
-            <audio id="btn_audio22">
-                <source src="./audio/123954422556404.mp3" type="audio/mp3">
-            </audio> 
-            
-            <div class="btn2" onclick="audio8()">クイズ問題の再生とランダム出題は、いろんな方法を試してうまくいきました。また、手話やクイズの画面を作り、ペッパーに取り込む作業も大変でした。
-            </div>
-            <audio id="btn_audio8">
-                <source src="./audio/8.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn2 draggable draggable-23 js-draggable" ondblclick="audio23()">縦軸横軸探知機については、僕は座標を計算で求めるやり方がわからなかったので自然に思いつきました。<br>先生にこれを一番褒められて、びっくりしました。</div>
+        <audio id="btn_audio23">
+            <source src="./audio/23.mp3" type="audio/mp3">
+        </audio>  
+        
+        <div class="btn2 draggable draggable-24 js-draggable" ondblclick="audio24()">今回、画面をたくさん作りました。<br>作るときはパワーポイントを使ったのですが、作り方は家族に教えてもらいました。あと、インターネットで調べて作りました。</div>
+        <audio id="btn_audio24">
+            <source src="./audio/24.mp3" type="audio/mp3">
+        </audio> 
 
-            <div class="btn2" onclick="audio9()">全体をとおしてpepperの動きを想像しながら作ることが楽しかったです。表彰式で本物のペッパーが動く姿を見たとき感動しました。
-            </div>
-            <audio id="btn_audio9">
-                <source src="./audio/zenntai.mp3" type="audio/mp3">
-            </audio>
+        <div class="btn2 draggable draggable-25 js-draggable" ondblclick="audio25()">ユニバーサル名人の<br>制作期間は応募までの１か月です。<br>------------その後も<br>改良していて、<br>全部で３か月です。</div>
+        <audio id="btn_audio25">
+            <source src="./audio/25.mp3" type="audio/mp3">
+        </audio> 
 
-            <div class="btn2" onclick="audio2()">いろんな人と接することができるので感染症などをうつさずに人をなぐさめたりできると思います。また僕は話せないので発表などに使いたいです。</div>
-            <audio id="btn_audio2">
-                <source src="./audio/2.mp3" type="audio/mp3">
-            </audio>   
+        <div class="btn2 draggable draggable-26 js-draggable" ondblclick="audio26()">読み上げ名人の<br>制作期間は<br>2週間です。<br>地方大会後に<br>ブラッシュアップもしたので<br>合計3週間です。</div>
+        <audio id="btn_audio26">
+            <source src="./audio/26.mp3" type="audio/mp3">
+        </audio> 
 
-            <div class="btn2" onclick="audio30()">何か家事をまかせてみたいです。------------------------------------------------------------------         -----------------------------------------------------</div>
-            <audio id="btn_audio30">
-                <source src="./audio/30.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn2 draggable draggable-27 js-draggable" ondblclick="audio27()">人に使ってもらって<br>「勉強ばかりではなく、<br>クイズやおみくじなど楽しいものが入っているのでいいね」という感想を言ってもらえてうれしかったです。</div>
+        <audio id="btn_audio27">
+            <source src="./audio/27.mp3" type="audio/mp3">
+        </audio>   
 
-            <div class="btn2" onclick="audio10()">クイズや手話をもっと増やしたいです。クイズは上級コースと初級コースなどレベル分けをしたいです。-------------------------</div>
-            <audio id="btn_audio10">
-                <source src="./audio/kuizuyasyuwawomottohuyashitai.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn2 draggable draggable-28 js-draggable" ondblclick="audio28()">このペッパーを<br>使ってもらうには、<br>公共の場所など<br>人が集まるところに<br>置くのが<br>いいと思います。</div>
+        <audio id="btn_audio28">
+            <source src="./audio/28.mp3" type="audio/mp3">
+        </audio>   
+        
+        <div class="btn2 draggable draggable-29 js-draggable" ondblclick="audio29()">クイズの出題を3問にしたのは、<br>少なすぎても<br>多すぎても使う人に満足してもらえないかな思って、ちょうどいい数が3問ぐらいと考えて決めました。</div>
+        <audio id="btn_audio29">
+            <source src="./audio/29.mp3" type="audio/mp3">
+        </audio>   
 
-            <div class="btn2" onclick="audio11()">公共の場所など人が集まるところに置きたいです。---------------------------------------------------------------------------------------------------------</div>
-            <audio id="btn_audio11">
-                <source src="./audio/11.mp3" type="audio/mp3">
-            </audio>  
+        <div class="btn2 draggable draggable-30 js-draggable" ondblclick="audio30()">クイズの問題は自分で考えました。<br>最初は全部で6問だったのですが、<br>少しずつ増やして18問にしました。</div>
+        <audio id="btn_audio30">
+            <source src="./audio/30.mp3" type="audio/mp3">
+        </audio>           
+        
+        <div class="btn2 draggable draggable-31 js-draggable" ondblclick="audio31()">問題を関数にまとめたきっかけですが、<br>僕の理想とするペッパーの動きを、一度作ってみました。それを関数にまとめてみたら、うまくいきました。</div>
+        <audio id="btn_audio31">
+            <source src="./audio/31.mp3" type="audio/mp3">
+        </audio> 
 
-            <div class="btn2" onclick="audio12()">天気予報やスケジュールなどを管理し、ゴミ出しを教えてくれたり、予定を教えてくれたり、傘を持っていくようにアドバイスしてくれる機能を作ってみたいです。</div>
-            <audio id="btn_audio12">
-                <source src="./audio/12.mp3" type="audio/mp3">
-            </audio>  
-            
-            <div class="btn2" onclick="audio31()">はい。勉強ばかりではなく、クイズやおみくじなど楽しいものが入っているのでいいねと言ってくれました。-----------------------------------------------------------------</div>
-            <audio id="btn_audio31">
-                <source src="./audio/31.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn2 draggable draggable-32 js-draggable" ondblclick="audio32()">好きなユニバーサルマークは、<br>ユニバーサルタクシーマークで、<br>よく見かけるけど<br>意味を知らなくて、<br>走っているタクシーに興味を持ったからです。</div>
+        <audio id="btn_audio32">
+            <source src="./audio/32.mp3" type="audio/mp3">
+        </audio>
 
-            <div class="btn2" onclick="audio7()">僕は発表の時などに話さないので、ペッパーくんは代わりに話してくれて、ありがたいです。</div>
-            <audio id="btn_audio7">
-                <source src="./audio/pepparhaarigatai.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn2 draggable draggable-33 js-draggable" ondblclick="audio33()">ユニバーサルマークを調べたきっかけは、手話の画面を作ってるときにお母さんが、手話のマーク知ってる？と声をかけてくれたことです。インターネットで調べました。</div>
+        <audio id="btn_audio33">
+            <source src="./audio/33.mp3" type="audio/mp3">
+        </audio>
 
-            <div class="btn2" onclick="audio32()">世界一の売り上げのゲームを作りたいです。また、障害のある人や、高齢者の方々に役に立つものを作りたいです。</div>
-            <audio id="btn_audio32">
-                <source src="./audio/32.mp3" type="audio/mp3">
-            </audio> 
+        <div class="btn2 draggable draggable-34 js-draggable" ondblclick="audio34()">好きな<br>手話は<br>ありがとうです。<br>使う機会も<br>多いし、<br>簡単に表せるからです。</div>
+        <audio id="btn_audio34">
+            <source src="./audio/34.mp3" type="audio/mp3">
+        </audio>
 
-            <div class="btn2" onclick="audio24()">まだ簡単な挨拶程度ですが、少しずつ手話を覚えています。-----------------------------------------------------------------------</div>
-            <audio id="btn_audio24">
-                <source src="./audio/24.mp3" type="audio/mp3">
-            </audio>   
+        <div class="btn2 draggable draggable-35 js-draggable" ondblclick="audio35()">手話に<br>ついては、<br>まだ簡単な<br>あいさつ程度ですが、<br>少しずつ<br>覚えています。</div>
+        <audio id="btn_audio35">
+            <source src="./audio/35.mp3" type="audio/mp3">
+        </audio>
+          </div>
+           <div>
+        <div class="btn draggable draggable-36 js-draggable" ondblclick="audio36()">手話をイラスト化した理由は、はじめ、写真に写っている人が僕だとわからないようにするためにしました。結局、わかりにくいという声があり、写真調にしました。</div>
+        <audio id="btn_audio36">
+            <source src="./audio/36.mp3" type="audio/mp3">
+        </audio> 
 
-         
-            
+        <div class="btn draggable draggable-37 js-draggable" ondblclick="audio37()">手話は<br>動画で<br>表示されるといいのですが、ロボブロックスでは、動画が使えないので、写真をつなげました。</div>
+        <audio id="btn_audio37">
+            <source src="./audio/37.mp3" type="audio/mp3">
+        </audio> 
+
+        <div class="btn draggable draggable-38 js-draggable" ondblclick="audio38()">手話はインターネットのサイトを見て、学びました。<br>-<br>-<br>-<br>- </div>
+        <audio id="btn_audio38">
+          <source src="./audio/38.mp3" type="audio/mp3">>
+        </audio> 
+
+        <div class="btn draggable draggable-39 js-draggable" ondblclick="audio39()">ペッパーにはタッチパネルやセンサーのほか、皆の声を聞き取る聞き取り機能があります。僕が声が出ないので、声を聞き取る機能は使いませんでした。</div>
+        <audio id="btn_audio39">
+            <source src="./audio/39.mp3" type="audio/mp3">
+        </audio> 
+
+        <div class="btn draggable draggable-40 js-draggable" ondblclick="audio40()">ペッパーのいいところは、僕みたいに、しゃべれない人のかわりに気持ちを伝えてくれるところが僕にとっては一番いいと思いました。------------</div>
+        <audio id="btn_audio40">
+            <source src="./audio/40.mp3" type="audio/mp3">
+        </audio> 
+
+        <div class="btn draggable draggable-41 js-draggable" ondblclick="audio41()">このペッパーを置きたい場所は、公共の場所など人が集まるところです。特に、学校に置いてみんなでユニバーサルマークや手話を覚えられるといいなと思います。</div>
+        <audio id="btn_audio41">
+            <source src="./audio/41.mp3" type="audio/mp3">
+        </audio> 
+
+        <div class="btn draggable draggable-42 js-draggable" ondblclick="audio42()">読み上げ名人は、<br>入力した文字を読み上げたり、<br>あらかじめ作って<br>おいた<br>答えを読み上げたりする機能があります。</div>
+        <audio id="btn_audio42">
+            <source src="./audio/42.mp3" type="audio/mp3">
+        </audio> 
+
+        <div class="btn draggable draggable-43 js-draggable" ondblclick="audio43()">ペッパーの使い方としては、何かの先生になれると思います。また、感染症などをうつさずに人のお世話をしたり、様子を確認したりできると思います。僕は発表などに使いたいです。</div>
+        <audio id="btn_audio43">
+            <source src="./audio/43.mp3" type="audio/mp3">
+        </audio>
+        
+        <div class="btn draggable draggable-44 js-draggable" ondblclick="audio44()">今後はペッパーで天気予報やスケジュールなどを管理し、ゴミ出しを教えてくれたり、予定を教えてくれたり、傘を持っていくようにアドバイスしてくれる機能を作ってみたいです。</div>
+        <audio id="btn_audio44">
+            <source src="./audio/44.mp3" type="audio/mp3">
+        </audio> 
+
+        <div class="btn draggable draggable-45 js-draggable" ondblclick="audio45()">将来プログラミングの技術を使って、<br>障害のある人や、<br>高齢者の方々に役に立つものを作りたいです。世界一の売り上げのゲームも作りたいです。</div>
+        <audio id="btn_audio45">
+            <source src="./audio/45.mp3" type="audio/mp3">
+        </audio> 
+
+        <div class="btn draggable draggable-46 js-draggable" ondblclick="audio46()">プログラミングは、プログラミング教室に週に２回通って勉強しています。<br>-<br>-<br>-<br>-</div>
+        <audio id="btn_audio46">
+            <source src="./audio/46.mp3" type="audio/mp3">
+        </audio> 
+
+        <div class="btn draggable draggable-47 js-draggable" ondblclick="audio47()">プログラミングがわからないときは、<br>ネットで調べたりします。<br>それでも<br>できないときは<br>先生に聞いたりします。</div>
+        <audio id="btn_audio47">
+            <source src="./audio/47.mp3" type="audio/mp3">
+        </audio> 
+
+        <div class="btn draggable draggable-48 js-draggable" ondblclick="audio48()">このような舞台に立って発表できたことがうれしいです。また、協力や応援してくださった家族や先生方に感謝の気持ちでいっぱいです。</div>
+        <audio id="btn_audio48">
+            <source src="./audio/48.mp3" type="audio/mp3">
+        </audio> 
+
+        <div class="btn draggable draggable-49 js-draggable" ondblclick="audio49()">僕が作品を通して一番伝えたいことは、<br>プログラミングは何かの問題を解決するために役に立つということです。</div>
+        <audio id="btn_audio49">
+            <source src="./audio/49.mp3" type="audio/mp3">
+        </audio> 
+
+        <div class="btn draggable draggable-50 js-draggable" ondblclick="audio50()">プログラミングは楽しいです。頑張って勉強すると、問題を解決できます。だから、たくさんの人にプログラミングの楽しさを知ってほしいです。</div>
+        <audio id="btn_audio50">
+            <source src="./audio/50.mp3" type="audio/mp3">
+        </audio> 
+
+    </div></div></div>
+      
+</body>
+</html>
+<script>
+
+class Interact {
+  constructor(){
+    this.applyInteractJs();
+  }
 
 
+  applyInteractJs(){
+    this.createPositionStorage();
+    this.addDraggingEvent();
+  }
 
 
-            <div class="btn2" onclick="audio13()">写真を絵に加工するアプリを使って、手話の動作をつなげました。</div>
-            <audio id="btn_audio13">
-                <source src="./audio/13.mp3" type="audio/mp3">
-            </audio>   
-            
-            <div class="btn2" onclick="audio14()">普段は週に２、3時間やっています。-----------------------------</div>
-            <audio id="btn_audio14">
-                <source src="./audio/14.mp3" type="audio/mp3">
-            </audio>   
-
-            <div class="btn2" onclick="audio15()">ネットで調べたりします。それでもできないときは先生に聞いたりします。</div>
-            <audio id="btn_audio15">
-                <source src="./audio/15.mp3" type="audio/mp3">
-            </audio> 
-            
-            
-
-            <div class="btn2" onclick="audio25()">去年から手話のことがずっと気になっていたので、作品にしました。--------------------------------------------</div>
-            <audio id="btn_audio25">
-                <source src="./audio/25.mp3" type="audio/mp3">
-            </audio> 
-
-            <div class="btn2" onclick="audio26()">ジャバスクリプトを勉強しているので、近い考え方で作りました。------------------------------------------</div>
-            <audio id="btn_audio26">
-                <source src="./audio/26.mp3" type="audio/mp3">
-            </audio>
-
-            <div class="btn2" onclick="audio2002()">見づらいと言われた手話の画像を作り直したりしました。</div>
-            <audio id="btn_audio2002">
-                <source src="./audio/mizurai.mp3" type="audio/mp3">
-            </audio>
-
-            <div class="btn2" onclick="audio2003()">公共の場所など人が集まるところに置きたいです。特に、学校に置いて皆でユニバーサルマークや手話を覚えられるといいなと思います。</div>
-            <audio id="btn_audio2003">
-                <source src="./audio/koukyou.mp3" type="audio/mp3">
-            </audio>
-
-            <div class="btn2" onclick="audio2004()">僕のように何かできない人に使ってほしいです。少しでも何か希望を感じてほしいからです。</div>
-            <audio id="btn_audio2004">
-                <source src="./audio/kibou.mp3" type="audio/mp3">
-            </audio>
+  createPositionStorage(){
+    this.target = document.querySelectorAll('.js-draggable');
+    if(!this.target){
+      return;
+    }
+    const arr = [...this.target];
+    this.editStyle = {};
+    arr.forEach((el) => {
+      this.editStyle[`target-${el.textContent}`] = {
+        x     : 0,
+        y     : 0,
+        scale : 1
+      };
+    });
+  }
 
 
-            <div class="btn" onclick="audio2005()">縦軸・横軸の位置を簡単に出すために、自分で縦軸横軸探知機を作りました。そうすると簡単にできました。</div>
-            <audio id="btn_audio2005">
-                <source src="./audio/33.mp3" type="audio/mp3">
-            </audio> 
+  addDraggingEvent(){
+    if(!this.target){
+      return;
+    }
 
-            <div class="btn" onclick="audio34()">リスト機能を使って作っていましたが、うまくいきませんでした。だから、僕の理想とするペッパーを、一度作り、それを関数にまとめてみたら、うまくいきました。</div>
-            <audio id="btn_audio34">
-                <source src="./audio/34.mp3" type="audio/mp3">
-            </audio> 
+    interact('.js-draggable')
 
-            <div class="btn" onclick="audio35()">はじめはうまくいかなくて、あきらめようとしました。だけど、「こうなるといいのにな」と思いながら、問題の関数を３つつなげてみた時に思いつきました。</div>
-            <audio id="btn_audio35">
-              <source src="./audio/35.mp3" type="audio/mp3">
-            </audio> 
-
-            <div class="btn" onclick="audio36()">３カ月ですーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー--------------------------------------------------</div>
-            <audio id="btn_audio36">
-                <source src="./audio/36.mp3" type="audio/mp3">
-            </audio> 
-
-            <div class="btn" onclick="audio37()">画面の作成は、パワーポイントを家族に教えてもらいました。あと、インターネットで調べて作りました。--------------------------</div>
-            <audio id="btn_audio37">
-                <source src="./audio/37.mp3" type="audio/mp3">
-            </audio> 
-
-            <div class="btn" onclick="audio99999()">使いやすい面では、スクラッチが好きです。でも、ペッパー君を動かすことができるロボブロックスも面白いです--------------</div>
-            <audio id="btn_audio99999">
-                <source src="./audio/docchigasuki.mp3" type="audio/mp3">
-            </audio> 
-
-            <div class="btn" onclick="audio39()">ネットで調べたりします。あと、他のことをしているときもずっと「どうしたらうまくいくか」を考えて最終的に思いつきました。</div>
-            <audio id="btn_audio39">
-                <source src="./audio/39.mp3" type="audio/mp3">
-            </audio> 
-
-            <div class="btn" onclick="audio40()">ジャバスクリプトを勉強しているので、近い考え方で作りました。-----------------------------------------------------------------------------------------------------------</div>
-            <audio id="btn_audio40">
-                <source src="./audio/40.mp3" type="audio/mp3">
-            </audio> 
-
-            <div class="btn" onclick="audio41()">手話をしている僕の写真を撮りました。その写真を絵に加工するアプリを使って、手話の動作をつなげました。出演者が僕だとわかりにくくするためにしました。</div>
-            <audio id="btn_audio41">
-                <source src="./audio/41.mp3" type="audio/mp3">
-            </audio> 
-
-            <div class="btn" onclick="audio42()">困っている人を助けられるアプリを作れる人になりたいです。ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー</div>
-            <audio id="btn_audio42">
-                <source src="./audio/困っている.mp3" type="audio/mp3">
-            </audio> 
-
-            <div class="btn" onclick="audio47()">プログラミングは楽しいです。頑張って勉強すると、問題を解決できます。だから、たくさんの人にプログラミングの楽しさを知ってほしいです。</div>
-            <audio id="btn_audio47">
-                <source src="./audio/puroguraminngu .mp3" type="audio/mp3">
-            </audio>
-            
-            <div class="btn" onclick="audio43()">話せないのだけれど、この大会に参加したかったので、アプリを作りました。--------------------------------------------------------------</div>
-            <audio id="btn_audio43">
-                <source src="./audio/hanasenaikeredo,.mp3" type="audio/mp3">
-            </audio> 
-
-            <div class="btn" onclick="audio44()">二週間くらいです。-------------------------------------------------------------------------------------------------------------------------------------------------------------</div>
-            <audio id="btn_audio44">
-                <source src="./audio/nisyuukann.mp3" type="audio/mp3">
-            </audio> 
-
-            <div class="btn" onclick="audio45()">ジャバスクリプトを勉強していたので、簡単にできました。---------------------------------------------------------------------------------------------------------------------</div>
-            <audio id="btn_audio45">
-                <source src="./audio/bennkyou.mp3" type="audio/mp3">
-            </audio> 
-
-            <div class="btn" onclick="audio46()">自分で文字を入力して読んだり登録してある文章を読み上げることができます。---------------------------------------------------------------------------------</div>
-            <audio id="btn_audio46">
-                <source src="./audio/jibunn.mp3" type="audio/mp3">
-            </audio> 
-
-        </main>
-    <script type="text/javascript">
+    .gesturable({
+      onmove: (e) => {
     
-      'use strict'
-    
-      function pronounce() {
-    
-        let word = document.getElementById('word').value;
-        let u = new SpeechSynthesisUtterance();
-        u.lang = 'ja';
-        u.text = word;
-        speechSynthesis.speak(u);
+        this.scaleMoveListener(e);
       }
+    })
 
-      function audio1() {
+    .draggable({
+  
+      inertia     : true,
+
+      modifiers   : [
+      interact.modifiers.restrictRect({
+
+        restriction : 'parent',
+
+        endOnly     : true
+      })
+      ],
+
+      autoScroll  : true,
+
+  
+      onmove      : (e) => {
+        this.dragMoveListener(e);
+      },
+    
+      onend       : (e) => {
+        this.dragEndListner(e);
+      }
+    });
+  }
+
+ 
+  scaleMoveListener(event){
+    event.stopPropagation();
+    const target    = event.target;
+    const target_id = target.textContent;
+    const editStyle = this.editStyle[`target-${target_id}`];
+
+    editStyle.scale = event.scale;
+
+   
+    this.addEditedStyle(target, editStyle);
+
+    this.showPositionInfomation(target_id, event);
+  }
+
+
+  dragMoveListener(event){
+    event.stopPropagation();
+    const target    = event.target;
+    const target_id = target.textContent;
+    const editStyle  = this.editStyle[`target-${target_id}`];
+
+
+    editStyle.x = (parseFloat(editStyle.x) || 0) + event.dx;
+    editStyle.y = (parseFloat(editStyle.y) || 0) + event.dy;
+
+   
+    this.addEditedStyle(target, editStyle);
+
+ 
+    this.showPositionInfomation(target_id, event);
+  }
+
+ 
+  
+  addEditedStyle(target, editStyle){
+     
+     target.style.webkitTransform =
+     target.style.transform =
+     `translate(${editStyle.x}px, ${editStyle.y}px) scale(${editStyle.scale}`;
+   }
+
+ 
+  
+  dragEndListner(event){
+    const target_id = event.target.textContent;
+    this.showPositionInfomation(target_id, event);
+  }
+
+  showPositionInfomation(target_id, event){
+  
+    const target = document.getElementById(`js-distance-${target_id}`);
+    if(!target){
+      return;
+    }
+    const moveValue = (Math.sqrt(Math.pow(event.pageX - event.x0, 2) + Math.pow(event.pageY - event.y0, 2) | 0)).toFixed(2) + 'px';
+    target.textContent = moveValue;
+
+   
+    const targetScale = document.getElementById(`js-scale-${target_id}`);
+    if(!targetScale){
+      return;
+    }
+    targetScale.textContent = event.scale ? event.scale.toFixed(2) : 1;
+
+  }
+
+}
+new Interact();
+
+function audio1() {
         document.getElementById('btn_audio1').currentTime = 0; //連続クリックに対応
         document.getElementById('btn_audio1').play(); //クリックしたら音を再生
       }
@@ -549,55 +666,8 @@
         document.getElementById('btn_audio50').play(); //クリックしたら音を再生
       }
 
-      
-      function audio49() {
-        document.getElementById('btn_audio51').currentTime = 0; //連続クリックに対応
-        document.getElementById('btn_audio51').play(); //クリックしたら音を再生
-      }
-
-      
-      function audio49() {
-        document.getElementById('btn_audio52').currentTime = 0; //連続クリックに対応
-        document.getElementById('btn_audio52').play(); //クリックしたら音を再生
-      }
-
-      function audio2000() {
-        document.getElementById('btn_audio2000').currentTime = 0; //連続クリックに対応
-        document.getElementById('btn_audio2000').play(); //クリックしたら音を再生
-      }
-
-      function audio2001() {
-        document.getElementById('btn_audio2001').currentTime = 0; //連続クリックに対応
-        document.getElementById('btn_audio2001').play(); //クリックしたら音を再生
-      }
-
-      function audio2002() {
-        document.getElementById('btn_audio2002').currentTime = 0; //連続クリックに対応
-        document.getElementById('btn_audio2002').play(); //クリックしたら音を再生
-      }
-      function audio2003() {
-        document.getElementById('btn_audio2003').currentTime = 0; //連続クリックに対応
-        document.getElementById('btn_audio2003').play(); //クリックしたら音を再生
-      }
-
-      function audio2004() {
-        document.getElementById('btn_audio2004').currentTime = 0; //連続クリックに対応
-        document.getElementById('btn_audio2004').play(); //クリックしたら音を再生
-      }
-
-      function audio2005() {
-        document.getElementById('btn_audio2005').currentTime = 0; //連続クリックに対応
-        document.getElementById('btn_audio2005').play(); //クリックしたら音を再生
-      }
-
-      function audio99999() {
-        document.getElementById('btn_audio99999').currentTime = 0; //連続クリックに対応
-        document.getElementById('btn_audio99999').play(); //クリックしたら音を再生
-      }
+</script> 
+<script>
 
 
 </script>
-    
-    </body>
-    </html>
-    

@@ -1,0 +1,175 @@
+.container{
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .draggable {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 210px;
+    height: 134px;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 32%;
+    touch-action: none;
+    user-select: none;
+  }
+  
+  .btn1 {
+    box-sizing: border-box;
+    background-color: #0000cd;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin : 10px ;
+    display: inline-block;
+      text-align: center;
+      line-height: normal;
+      width: 30%;
+      height: 60px;
+  }
+  .btn {
+    box-sizing: border-box;
+    background-color: #ffd700;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin : 10px ;
+    display: inline-block;
+      text-align: center;
+      line-height: normal;
+      width: 30%;
+      height: 120px;
+  }
+  
+  .btn2 {
+    box-sizing: border-box;
+    background-color: #ff0000;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin : 10px ;
+    display: inline-block;
+      text-align: center;
+      line-height: normal;
+      width: 30%;
+      height: 120px;
+  }
+  
+
+  .flex_test-box {
+    background-color: #eee;     /* 背景色指定 */
+    padding:  10px;             /* 余白指定 */
+    display: flex;              /* フレックスボックスにする */
+    flex-wrap: wrap;            /* 折り返し指定 */
+    align-content:stretch;      /* 折り返し時の配置指定 */
+  }
+  
+  .btn {
+    padding: 10px;              
+    margin:  10px;              /* 外側の余白 */
+    border-radius:  5px;        /* 角丸指定 */
+    font-size:  12px;           /* 文字サイズ */
+    width: 200px;               /* 幅指定 */
+    text-align:  left;        /* 文字中央揃え */
+  }
+  
+  .flex_test-item:nth-child(1) {
+    background-color:  #2196F3; /* 背景色指定 */
+  }
+  
+  .flex_test-item:nth-child(2) {
+    background-color:  #4CAF50; /* 背景色指定 */
+  }
+  
+  .flex_test-item:nth-child(3) {
+    background-color: #3F51B5; /* 背景色指定 */
+  }
+  
+  .flex_test-item:nth-child(4) {
+    background-color:  #00BCD4; /* 背景色指定 */
+  }
+  
+  .btn1 {
+    padding: 10px;              
+    margin:  10px;              /* 外側の余白 */
+    border-radius:  5px;        /* 角丸指定 */
+    font-size:  12px;           /* 文字サイズ */
+    width: 200px;               /* 幅指定 */
+    text-align:  center;        /* 文字中央揃え */
+  }
+  
+  .flex_test-item:nth-child(1) {
+    background-color:  #2196F3; /* 背景色指定 */
+  }
+  
+  .flex_test-item:nth-child(2) {
+    background-color:  #4CAF50; /* 背景色指定 */
+  }
+  
+  .flex_test-item:nth-child(3) {
+    background-color: #3F51B5; /* 背景色指定 */
+  }
+  
+  .flex_test-item:nth-child(4) {
+    background-color:  #00BCD4; /* 背景色指定 */
+  }
+  
+  .btn2 {
+    padding: 10px;              
+    margin:  10px;              /* 外側の余白 */
+    border-radius:  5px;        /* 角丸指定 */
+    font-size:  12px;           /* 文字サイズ */
+    width: 200px;               /* 幅指定 */
+    text-align:  left;        /* 文字中央揃え */
+  }
+  
+  .flex_test-item:nth-child(1) {
+    background-color:  #2196F3; /* 背景色指定 */
+  }
+  
+  .flex_test-item:nth-child(2) {
+    background-color:  #4CAF50; /* 背景色指定 */
+  }
+  
+  .flex_test-item:nth-child(3) {
+    background-color: #3F51B5; /* 背景色指定 */
+  }
+  
+  .flex_test-item:nth-child(4) {
+    background-color:  #00BCD4; /* 背景色指定 */
+  }
